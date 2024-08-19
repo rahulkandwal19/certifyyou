@@ -1,0 +1,430 @@
+:root{
+    --colour1 : #ffffff;
+    --colour2 : blue;
+    --colour3 : #FFFFFF;
+    --colour4: #bdbdff;
+}
+.buttonMain {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 4px solid blue;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    background-color: blue;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+.buttonMain:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    z-index: -1;
+}
+.buttonMain:hover, .buttonMain:focus {
+    color: blue;
+    background-color: white;
+    border-radius: 10px;
+}
+.buttonMain:hover:before, .buttonMain:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: 20px;
+}
+.buttonMain:active {
+    transform: scale(0.8);
+    border-radius: 10px;
+}
+
+body{
+    background-color: var(--colour1);
+ }
+
+
+.footer{
+    background: linear-gradient(95deg, midnightblue 40%, blue 100%) !important;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    left: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 11;
+
+}
+
+#orglogo{
+    height: 45px;
+    width: 85px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+/*-----------------------------------------------------------------*/
+
+#verificationBadgeSection{
+    z-index: 5;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(95deg, blue 10%, midnightblue 100%) !important;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 5px;
+}
+
+#certificateImageSection{
+    display: inline-block;
+    position: relative;
+    top:135px;
+    width:50%;
+    left:2.5%
+}
+@media screen and (max-width: 600px) {
+    #certificateImageSection{
+        display: block;
+        width: 100%;
+        left:0;
+
+    }
+}
+#imageHolder{
+    display: block;
+    position: inherit;
+    width: 95%;
+    height:calc(50vw*0.95*0.5625);
+    left:2.5%;
+    background-color: var(--colour2);
+    border-radius: 10px;
+}
+@media screen and (max-width: 600px) {
+    #imageHolder{
+        height:calc(100vw*0.95*0.5625);
+        left:2.5%;
+    }
+}
+
+#buttonHolder{
+    display: block;
+    margin-top: 15px;
+}
+.ButtonTop{
+    position: relative;
+    bottom: 0;
+    width: 80%;
+    height: 60px;
+    margin-left: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+#infoSection{
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    top:135px;
+    background-color: var(--colour4);
+    border-radius: 15px;
+    box-shadow: black;
+    padding: 10px 20px;
+    margin-left: 5%;
+}
+@media screen and (max-width: 600px) {
+    #infoSection{
+        display: block;
+        position: relative;
+        margin-top: 30px ;
+        margin-bottom: 150px;
+        width: 90%;
+        margin-left: 0;
+        left:5%;
+    }
+
+}
+
+
+.info{
+    font-size: 22px;
+}
+
+#moreInfo{
+    position: relative;
+    width: 80%;
+    height: 50px;
+    left: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+    padding: 5px;
+}
+
+#share{
+    position: relative;
+    width: 50%;
+    height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 3px;
+    left: 25%;
+    padding: 5px;
+}
+
+#verifyBadage{
+    position: inherit;
+    width:85px;
+    height: 85px;
+    margin-right: 5px;
+    margin-top:7px;
+    right: 10px;
+
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+#eventDiv{
+    position: relative;
+    width: 100%;
+}
+#verifyText{
+    position: inherit;
+    font-size: 35px;
+    color: #ffffff;
+    right: 120px;
+    margin-top: 25px;
+    text-shadow: -1px 0 #1a5e00, 0 2px #1a5e00, 2px 0 #1a5e00, 0 -1px #1a5e00;
+}
+@media screen and (max-width: 600px) {
+    #verifyText{
+       display: none;
+    }
+}
+
+#issuerLogo{
+    position: inherit;
+    width: 143px;
+    height: 80px;
+    margin-right: 10px;
+    margin-top:10px;
+    left: 25px;
+
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+/*-----------------------------------------------------------------*/
+#orglogo{
+    height: 45px;
+    width: 85px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+#link{
+    color: #FFFFFF;
+    font-size: 18px;
+    position: fixed;
+    right: 20px;
+    bottom:18px;
+    text-decoration: none;
+}
+/*--------------------------------------------------*/
+.swal-modal{
+    max-width: 80vw;
+    z-index: 7;
+}
+.swal-button{
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--colour2);
+    font-size: 16px;
+}
+.swal-title{
+    color: black;
+}
+.swal-text{
+    color: #00006c;
+}
+.swal-overlay{
+    background-color: rgb(10, 88, 202,70%);
+}
+/*--------------------------------------------------*/
+#mainSection{
+    display: flex;
+    flex-direction: column;
+}
+
+#certificate{
+    position: relative;
+    width: 95%;
+    height: 90%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #FFFFFF;
+}
+
+#loading{
+    width:251px;
+    height: 251px;
+    position: absolute;
+    top:27vh;
+    left:40vw;
+    z-index: 11;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.share {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 14em;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px !important;
+    background: lightgrey;
+    transition: 0.4s ease-in-out, 0.2s background-color ease-in-out,
+    0.2s background-image ease-in-out;
+    background: rgba(255, 255, 255, 0.596);
+    backdrop-filter: blur(5px);
+    border: 1px solid transparent;
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.card:nth-child(1)  {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: #cc39a4;
+}
+
+.card:nth-child(2) {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: #03a9f4;
+}
+
+.card:nth-child(3){
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: #ffb5d2;
+}
+
+.card:nth-child(4) {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: black;
+}
+
+
+.card:nth-child(5)  {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
+
+.card:nth-child(6) {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: #8c9eff;
+}
+
+.card:nth-child(7)  {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: black;
+}
+
+.card:nth-child(8) {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: #29b6f6;
+}
+
+.card:nth-child(9){
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    fill: #29b6f6;
+}
+
+.share:hover {
+    width: 14em;
+    cursor: pointer;
+}
+
+.share{
+    opacity: 100;
+}
+
+.card {
+    margin: 0.2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+.card:hover {
+    background-color: midnightblue;
+}
+
+.card:hover img{
+    filter: brightness(0) invert(1);
+
+}
+
+
+

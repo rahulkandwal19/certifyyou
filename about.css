@@ -1,0 +1,278 @@
+:root{
+    --colour1 : #7575ba;
+    --colour2 : blue;
+    --colour3 : #FFFFFF;
+}
+/*-------------------------------------------------------*/
+.buttonMain {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 4px solid blue;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    background-color: blue;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+.buttonMain:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    z-index: -1;
+}
+.buttonMain:hover, .buttonMain:focus {
+    color: blue;
+    background-color: white;
+    border-radius: 10px;
+}
+.buttonMain:hover:before, .buttonMain:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: 20px;
+}
+.buttonMain:active {
+    transform: scale(0.8);
+    border-radius: 10px;
+}
+
+
+#main{
+    background-color: midnightblue;
+    height: 100vh;
+    width:100vw;
+    margin-left: 0;
+}
+
+.header{
+    background: linear-gradient(95deg, midnightblue 40%, blue 100%) !important;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 5;
+    border-bottom: 5px solid whitesmoke;
+}
+/*------------------------------------------------------*/
+.headerButton {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2px 2px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: white;
+}
+.headerButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.headerButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.headerButton::after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.headerButton::after {
+    background-color: whitesmoke;
+}
+.headerButton:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+/*------------------------------------------------------*/
+#backButton{
+    height: 70px;
+    width: 70px;
+    right: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("icons/homeButton.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+@media screen and (max-width: 600px) {
+    #backButton{
+        width: 60px;
+        height: 65px;
+        right: 10px;
+    }
+}
+.swal-modal{
+    max-width: 80vw;
+    z-index: 7;
+}
+.swal-button{
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--colour2);
+    font-size: 16px;
+}
+.swal-title{
+    color: black;
+}
+.swal-text{
+    color: #00006c;
+}
+.swal-overlay{
+    background-color: rgb(25, 25, 112,70%);
+}
+
+#Section{
+    width: 55vw;
+    height: 70vh;
+    text-align: center;
+    background: var(--colour3);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    top: 51%;
+    transform: translate(-50%, -50%);
+    left:50%;
+    overflow-y: scroll !important;
+}
+@media only screen and (max-width: 600px) {
+    #Section {
+        width: 90vw;
+        height:65vh;
+        left:50%;
+    }
+}
+#check{
+    position: relative;
+    width: 60%;
+    height: 60px;
+    margin-top: 30px;
+    font-size: 26px;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 600px) {
+    #check{
+        font-size: 16px;
+        width: 90%;
+        padding: 0.7em 2em;
+        border-radius: 10px;
+    }
+}
+#logo{
+    margin-top: 10px;
+    height: 70px;
+    width: 145px;
+    position: absolute;
+    left: 15px;
+}
+#head{
+    padding-top: 4vh;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+}
+#notFound{
+    position: relative;
+    top:5%;
+    width: 300px;
+    aspect-ratio: 1/1;
+    font-size: 26px;
+}
+@media screen and (max-width: 600px) {
+    #notFound{
+        position: relative;
+        width: 150px;
+        top:5%;
+        aspect-ratio: 1/1;
+        font-size: 26px;
+    }
+}
+
+#text{
+    padding:20px 50px;
+    font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+    #text{
+        padding:3px 10px;
+        font-size: 14px;
+    }
+}
+/*------------------------------------------------------------
+                     FOOTER - SECTION
+------------------------------------------------------------*/
+.footer{
+    background: linear-gradient(95deg, midnightblue 40%, blue 100%) !important;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 5px solid whitesmoke;
+
+}
+/*--------------------------------------------------------*/
+#orglogo{
+    height: 45px;
+    width: 85px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+/*---------------------------------------------------------*/
+#social{
+    display: flex;
+    height: 70px;
+    bottom: 0;
+    justify-content: flex-end;
+    position: relative;
+    top: 20%;
+}
+.socialButton{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 40px;
+    width: 50px;
+    right: 10px;
+}
+.socialImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}

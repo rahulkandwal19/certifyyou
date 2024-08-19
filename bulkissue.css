@@ -1,0 +1,336 @@
+:root{
+    --colour1 : #ffffff;
+    --colour2 : blue;
+    --colour3 : #FFFFFF;
+    --colour4: #BDBDFFFF;
+}
+
+
+body{
+    background-color: midnightblue;
+    width: 100vw;
+}
+
+
+
+.header{
+    background: linear-gradient(95deg, midnightblue 40%, blue 100%) !important;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    z-index:5;
+    border-bottom: 5px solid whitesmoke;
+}
+
+.footer{
+    background: linear-gradient(95deg, midnightblue 40%, blue 100%) !important;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index:5;
+    border-top: 5px solid whitesmoke;
+}
+#logo{
+    margin-top: 10px;
+    height: 70px;
+    width: 145px;
+    position: absolute;
+    left: 15px;
+}
+
+#orglogo{
+    height: 45px;
+    width: 85px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+#social{
+    display: flex;
+    height: 70px;
+    bottom: 0;
+    justify-content: flex-end;
+    position: relative;
+    top: 20%;
+}
+.socialButton{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 40px;
+    width: 50px;
+    right: 10px;
+}
+.socialImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+/*-------------------------------------------------------*/
+.buttonMain {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 4px solid whitesmoke;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    background-color: blue;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+.buttonMain:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    z-index: -1;
+}
+.buttonMain:hover, .buttonMain:focus {
+    color: blue;
+    background-color: white;
+    border-radius: 10px;
+}
+.buttonMain:hover:before, .buttonMain:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: 20px;
+}
+.buttonMain:active {
+    transform: scale(0.8);
+    border-radius: 10px;
+}
+/*------------------------------------------------------*/
+.headerButton {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2px 2px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: white;
+}
+.headerButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.headerButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.headerButton::after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.headerButton::after {
+    background-color: whitesmoke;
+}
+.headerButton:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+/*------------------------------------------------------*/
+#backButton{
+    height: 70px;
+    width: 70px;
+    right: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("icons/backButton.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+@media screen and (max-width: 600px) {
+    #backButton{
+        width: 60px;
+        height: 65px;
+        right: 10px;
+    }
+}
+
+#main{
+    position: absolute;
+    top:100px;
+    width: 100vw;
+    padding: 1% 5%;
+    height: 90px;
+}
+
+/*-----------------------------------------------------------------*/
+#formDiv{
+    position: relative;
+    width: 100%;
+    background-color: #6b1bd7;
+    border-radius: 20px;
+    padding: 1% 3%;
+    margin-top:1.5%
+}
+
+.form-control{
+    margin-bottom: 5px;
+}
+#head1{
+    font-size: 26px;
+    color:whitesmoke;
+    text-decoration-style: solid;
+    padding-bottom: 2px;
+}
+
+.head2{
+    font-size: 20px;
+    color:whitesmoke;
+    text-decoration-style: solid;
+    padding-bottom: 2px;
+}
+
+
+
+.swal-modal{
+    max-width: 80vw;
+    z-index: 7;
+}
+.swal-button{
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--colour2);
+    font-size: 16px;
+}
+.swal-title{
+    color: black;
+}
+.swal-text{
+    color: #00006c;
+}
+.swal-overlay{
+    background-color: rgb(25, 25, 112,70%);
+}
+.swal-button--danger{
+    background-color: red;
+}
+
+#submit{
+    position: relative;
+    width: 60%;
+    height: 60px;
+    margin-left: 20%;
+    margin-top: 25px;
+    font-size: 26px;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 600px) {
+    #submit{
+        font-size: 16px;
+        width: 90%;
+        margin-left: 5%;
+        padding: 0.7em 2em;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+}
+#LoadingOverlay{
+    position :fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index:4;
+    background-color: midnightblue;
+}
+
+#loading{
+    position :relative;
+    width: 190px;
+    height: 190px;
+    top:35%;
+    left:42%;
+    z-index:4;
+}
+#comingsoon{
+    position: relative;
+    aspect-ratio: initial;
+    width: 40%;
+    left: 30%;
+    top:15%;
+}
+@media screen and (max-width: 600px) {
+    #loading {
+        width: 120px;
+        height: 120px;
+        top:40%;
+        left:35%;
+    }
+    #comingsoon{
+        position: relative;
+        aspect-ratio: initial;
+        width: 80%;
+        left: 10%;
+        top:40%;
+        margin-bottom: 25px;
+    }
+}
+
+.headmsg{
+    align-self: center ;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.msg{
+    align-self: center ;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .headmsg{
+        align-self: center ;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .msg{
+        align-self: center ;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+#emailre{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 3px #ffaf00;
+}

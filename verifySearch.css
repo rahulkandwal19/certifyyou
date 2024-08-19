@@ -1,0 +1,454 @@
+/*---------------------------------------------------------
+             COLOUR - VARIABLES & NATIVE CSS
+---------------------------------------------------------*/
+:root{
+    --colour1 : #ffffff;
+    --colour2 : blue;
+    --colour3 : #FFFFFF;
+    --colour4: #BDBDFFFF;
+}
+/*---------------------------------------------------------
+                         BODY
+---------------------------------------------------------*/
+body{
+    background-color: var(--colour1);
+ }
+/*---------------------------------------------------------
+                   HEADER - SECTION
+---------------------------------------------------------*/
+.header{
+    background: linear-gradient(95deg, midnightblue 40%, blue 100%) !important;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    border-bottom: 5px solid whitesmoke;
+}
+/*------------------------------------------------------*/
+.headerButton {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2px 2px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: white;
+}
+.headerButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.headerButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.headerButton::after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.headerButton::after {
+    background-color: whitesmoke;
+}
+.headerButton:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+/*------------------------------------------------------*/
+#backButton{
+    height: 70px;
+    width: 70px;
+    right: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("icons/homeButton.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+@media screen and (max-width: 600px) {
+    #backButton{
+        width: 60px;
+        height: 65px;
+        right: 10px;
+    }
+}
+/*------------------------------------------------------*/
+#closeButton{
+    height: 70px;
+    width: 70px;
+    right: 40px;
+    margin-top: 10px;
+    background-image: url("icons/backButton.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+@media screen and (max-width: 600px) {
+    #closeButton{
+        width: 60px;
+        height: 65px;
+        margin-left: 5px;
+        right: 10px;
+    }
+}
+/*---------------------------------------------------------
+                      MAIN - SECTION
+---------------------------------------------------------*/
+#logo{
+    margin-top: 10px;
+    height: 70px;
+    width: 145px;
+    position: absolute;
+    left: 15px;
+}
+
+/*---------------------------------------------------------
+                      MENU - SECTION
+---------------------------------------------------------*/
+#main{
+    position: absolute;
+    margin-top:95px;
+    height:80vh;
+    width: 100vw;
+}
+/*-------------------------------------------------------*/
+.searchBox {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: var(--colour2);
+    height: 70px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.searchButton {
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    background: white;
+    color : var(--colour2);
+
+}
+
+form{
+   display: none;
+}
+
+#searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    color: white;
+    font-size: 16px;
+    text-decoration-color: #FFFFFF;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 70vw;
+    padding: 0 6px;
+    margin-top: 3px;
+    margin-left: 15px;
+}
+#searchButtonIcon{
+    position: inherit;
+    height: 70%;
+    width: 85%;
+    display: inherit;
+    justify-self: center;
+}
+
+#scanBox{
+    position: inherit;
+    background: midnightblue;
+    bottom: 0;
+    height: 70%;
+    width: 100%;
+    padding: 10px;
+}
+#imageHolder{
+    position: relative;
+    bottom: 0;
+    height: 90%;
+    top:5%;
+    width: 60%;
+    left: 40%;
+    padding: 30px;
+}
+#checkIMG{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#scanButton{
+    position: inherit;
+    background-color: var(--colour2);
+    border-radius: 20%;
+    width: 25%;
+    height: 70%;
+    left: 10%;
+    top:15%
+}
+@media screen and (max-width: 600px){
+    #scanButton{
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top:10%
+    }
+    #imageHolder{
+        display: none;
+    }
+}
+#scanButton:hover{
+    border: 5px solid whitesmoke;
+}
+#scanIcon{
+    position: inherit;
+    width: 85%;
+    height: 85%;
+    top:6%;
+    left:6%;
+}
+/*---------------------------------------------------------
+                      MENU - SECTION
+---------------------------------------------------------*/
+.overlay {
+    height: 0;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: midnightblue;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.overlay a {
+    padding: 2px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 60px;
+}
+@media screen and (max-width: 600px){
+    .overlay {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .close-btn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+/*------------------------------------------------*/
+.scanContainer {
+    position: absolute;
+    top: 110px;
+    width: 90%;
+    height: 40%;
+    margin-left: 5px;
+    margin-right:5px;
+    bottom: 10%;
+}
+@media screen and (max-width: 600px){
+    .scanContainer {
+        margin-left: 0;
+    }
+}
+.swal-modal{
+    max-width: 80vw;
+    z-index: 7;
+}
+.swal-button{
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--colour2);
+    font-size: 16px;
+}
+.swal-title{
+    color: black;
+}
+.swal-text{
+    color: #00006c;
+}
+.swal-overlay{
+    background-color: rgb(25,25, 112,70%);
+}
+
+.logoSection{
+    background-color: blue;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+    position: absolute;
+    top: 51%;
+    padding: 25px;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+.container h1 {
+    color: #ffffff;
+}
+.section {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border: 2px solid #b2b2b2;
+    border-radius: 0.25em;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+    width:50%;
+}
+@media screen and (max-width: 600px){
+    .section {
+        width: 100%;
+    }
+    #my-qr-reader__scan_region{
+        aspect-ratio: 4/3;
+    }
+    video {
+        width: 100% !important;
+        aspect-ratio: 4/3;
+        border: none;
+        border-radius: 0;
+    }
+}
+
+#my-qr-reader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px !important;
+    border: 2px solid #b2b2b2 !important;
+    border-radius: 8px;
+}
+#my-qr-reader img[alt="Info icon"] {
+    display: none;
+}
+#my-qr-reader img[alt="Camera based scan"] {
+    width: 100px !important;
+    height: 100px !important;
+}
+#html5-qrcode-button-camera-start,
+#html5-qrcode-button-camera-stop ,
+#html5-qrcode-button-file-selection ,
+#html5-qrcode-button-camera-permission{
+    padding: 10px 20px;
+    border: 1px solid #b2b2b2;
+    outline: none;
+    border-radius: 0.25em;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color: #0a58ca;
+    transition: 0.3s background-color;
+}
+#html5-qrcode-button-camera-start:hover ,
+#html5-qrcode-button-camera-stop:hover ,
+#html5-qrcode-button-file-selection:hover ,
+#html5-qrcode-button-camera-permission:hover{
+    background-color: #1d9bf0;
+}
+#html5-qrcode-anchor-scan-type-change {
+    text-decoration: none !important;
+    color: #1d9bf0;
+}
+video {
+    width: 100% !important;
+    border: 1px solid #b2b2b2 !important;
+    border-radius: 0.25em;
+}
+/*------------------------------------------------------------
+                     FOOTER - SECTION
+------------------------------------------------------------*/
+.footer{
+    background: linear-gradient(95deg, midnightblue 40%, blue 100%) !important;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-top: 5px solid whitesmoke;
+}
+/*--------------------------------------------------------*/
+#orglogo{
+    height: 45px;
+    width: 85px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+/*--------------------------------------------------------*/
+#social{
+    display: flex;
+    height: 70px;
+    bottom: 0;
+    justify-content: flex-end;
+    position: relative;
+    top: 20%;
+}
+/*--------------------------------------------------------*/
+.socialButton{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 40px;
+    width: 50px;
+    right: 10px;
+}
+.socialImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+/*--------------------------------------------------------*/
